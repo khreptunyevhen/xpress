@@ -1,0 +1,21 @@
+/* Fonts */
+
+body {
+  background-color: aquamarine;
+}
+
+.container {
+  max-width: calc(var(--main-container) + 2 * var(--padding-container));
+  padding: 0 var(--padding-container);
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
