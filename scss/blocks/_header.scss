@@ -1,0 +1,15 @@
+.header {
+  padding: 40px 0;
+  background-color: transparent;
+}
+
+.header__container {
+  @include flex-c-sb-wrap;
+
+  gap: 20px;
+}
+
+.header__nav {
+  margin-right: 40px;
+  margin-left: auto;
+}

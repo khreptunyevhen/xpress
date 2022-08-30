@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo__img,
+.logo__text {
+  fill: #171fe5;
+}
+
+.logo__img--light,
+.logo__text--light {
+  fill: #fff;
+}

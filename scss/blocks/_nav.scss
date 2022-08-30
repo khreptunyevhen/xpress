@@ -1,0 +1,22 @@
+.nav {
+  font-family: var(--secondary-ff);
+}
+
+.nav__body {
+  @include flex-c-sb-wrap;
+
+  column-gap: 40px;
+  row-gap: 5px;
+}
+
+.nav__item {
+  transition: color .3s;
+}
+
+.nav__item:hover {
+  color: var(--hover-color);
+}
+
+.nav__item:active {
+  color: darken($color: #171fe5, $amount: 10);
+}

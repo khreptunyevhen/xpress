@@ -1,9 +1,16 @@
 :root {
   /* Font family */
+  --main-ff: 'Lexend', sans-serif;
+  --secondary-ff: 'Poppins', sans-serif;
 
   /* Markup */
   --main-container: 1140px;
   --padding-container: 15px;
 
   /* Colors */
+  --primary-color: #040522;
+  --secondary-color: #ff843f;
+  --hover-color: #171fe5;
+  --succes-color: #fd4848;
+  --light-color: #fff;
 }

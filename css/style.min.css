@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap");
 *,
 ::after,
 ::before {
@@ -49,15 +50,26 @@ button {
 
 :root {
   /* Font family */
+  --main-ff: 'Lexend', sans-serif;
+  --secondary-ff: 'Poppins', sans-serif;
   /* Markup */
   --main-container: 1140px;
   --padding-container: 15px;
   /* Colors */
+  --primary-color: #040522;
+  --secondary-color: #ff843f;
+  --hover-color: #171fe5;
+  --succes-color: #fd4848;
+  --light-color: #fff;
 }
 
 /* Fonts */
 body {
-  background-color: aquamarine;
+  font-family: var(--main-ff);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .container {
@@ -81,4 +93,179 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.header {
+  padding: 40px 0;
+  background-color: transparent;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header__nav {
+  margin-right: 40px;
+  margin-left: auto;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.logo__img,
+.logo__text {
+  fill: #171fe5;
+}
+
+.logo__img--light,
+.logo__text--light {
+  fill: #fff;
+}
+
+.nav {
+  font-family: var(--secondary-ff);
+}
+
+.nav__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 5px;
+}
+
+.nav__item {
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.nav__item:hover {
+  color: var(--hover-color);
+}
+
+.nav__item:active {
+  color: #1219b7;
+}
+
+.form-search {
+  position: relative;
+}
+
+.form-search__img,
+.form-search__basket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.form-search__img {
+  left: 7%;
+}
+
+.form-search__basket {
+  width: 16px;
+  right: 7%;
+}
+
+.form-search__img svg,
+.form-search__basket svg {
+  width: 100%;
+}
+
+.form-search__basket::before {
+  background-color: rgba(255, 132, 63, 0.1);
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 36px;
+  left: -100%;
+  top: -11px;
+}
+
+.form-search__basket::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  --size: 13px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  border: 1px solid var(--light-color);
+  font-family: var(--main-ff);
+  color: var(--light-color);
+  background-color: var(--succes-color);
+  position: absolute;
+  content: '2';
+  top: -50%;
+  right: -50%;
+  font-size: 8px;
+}
+
+.form-search__input {
+  font-family: var(--main-ff);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 70px;
+  padding: 12px 57px 12px 44px;
+  outline: none;
+}
+
+.form-search__input::-webkit-input-placeholder {
+  font-family: var(--main-ff);
+  color: rgba(4, 5, 34, 0.7);
+}
+
+.form-search__input:-ms-input-placeholder {
+  font-family: var(--main-ff);
+  color: rgba(4, 5, 34, 0.7);
+}
+
+.form-search__input::-ms-input-placeholder {
+  font-family: var(--main-ff);
+  color: rgba(4, 5, 34, 0.7);
+}
+
+.form-search__input::placeholder {
+  font-family: var(--main-ff);
+  color: rgba(4, 5, 34, 0.7);
+}
+
+.form-search__input:focus {
+  outline: 0.5px solid var(--primary-color);
 }
