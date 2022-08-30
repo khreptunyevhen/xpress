@@ -1,0 +1,49 @@
+.btn {
+  @include flex-center;
+  
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+
+  position: relative;
+  padding: 16px 65px 16px 30px;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.24;
+
+  transition: background-color .3s;
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  &::after {
+    --size: 26px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: var(--size);
+
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 24px;
+    transform: translate(0, -50%);
+    background-color: rgba(255, 255, 255, .1);
+    background-image: url(./../img/hero/button-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: all .3s;
+  }
+
+  &:hover,
+  &:active {
+    background-color: darken($color: #ff843f, $amount: 3)
+  }
+
+  &:hover::after {
+    right: 14px;
+    --size: 30px;
+  }
+}

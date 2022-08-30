@@ -96,8 +96,15 @@ body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 10;
   padding: 40px 0;
-  background-color: transparent;
+  background: linear-gradient(255.02deg, rgba(129, 194, 212, 0.56) 5.93%, rgba(138, 199, 217, 0.56) 23.18%, rgba(155, 207, 224, 0.72) 43.47%, rgba(135, 198, 215, 0.49) 58.21%, rgba(102, 178, 201, 0.57) 73.36%, rgba(98, 177, 198, 0.51) 92.76%);
 }
 
 .header__container {
@@ -224,9 +231,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   --size: 13px;
   width: var(--size);
   height: var(--size);
@@ -240,6 +247,13 @@ body {
   top: -50%;
   right: -50%;
   font-size: 8px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.form-search__basket:hover::after {
+  --size: 14px 
+    ;
 }
 
 .form-search__img svg,
@@ -277,7 +291,8 @@ body {
 }
 
 .form-search__input:focus {
-  outline: 0.5px solid var(--primary-color);
+  -webkit-box-shadow: 0px 4px 8px rgba(4, 5, 34, 0.05);
+          box-shadow: 0px 4px 8px rgba(4, 5, 34, 0.05);
 }
 
 @media (max-width: 575.98px) {
@@ -288,4 +303,145 @@ body {
   .form-search__basket {
     display: none;
   }
+}
+
+.hero {
+  position: relative;
+  padding-top: 240px;
+  padding-bottom: 130px;
+  background: linear-gradient(255.02deg, rgba(129, 194, 212, 0.56) 5.93%, rgba(138, 199, 217, 0.56) 23.18%, rgba(155, 207, 224, 0.72) 43.47%, rgba(135, 198, 215, 0.49) 58.21%, rgba(102, 178, 201, 0.57) 73.36%, rgba(98, 177, 198, 0.51) 92.76%);
+}
+
+.hero::after {
+  position: absolute;
+  content: '';
+  background-image: url("./../img/hero/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  bottom: 0;
+  right: 0;
+  max-width: 735px;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 517px;
+  z-index: 5;
+}
+
+.hero__wrapper::after {
+  position: absolute;
+  content: '';
+  right: -145px;
+  bottom: 0;
+  max-width: 155px;
+  width: 100%;
+  height: 83px;
+  border-radius: 5px;
+  background-image: url("./../img/hero/customers.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero__subtitle {
+  color: var(--hover-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.24;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 61px;
+  line-height: 1.2;
+}
+
+.hero__decsription {
+  margin-bottom: 56px;
+}
+
+@media (max-width: 767.98px) {
+  .hero__wrapper::after {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding-bottom: 60px;
+  }
+  .hero::after {
+    background-position: center;
+  }
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  position: relative;
+  padding: 16px 65px 16px 30px;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.24;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.btn svg {
+  width: 26px;
+  height: 26px;
+}
+
+.btn::after {
+  --size: 26px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: var(--size);
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 24px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url(./../img/hero/button-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn:hover, .btn:active {
+  background-color: #ff7a30;
+}
+
+.btn:hover::after {
+  right: 14px;
+  --size: 30px;
 }
