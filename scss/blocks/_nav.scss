@@ -1,22 +1,32 @@
 .nav {
   font-family: var(--secondary-ff);
+
+  &__body {
+    @include flex-c-sb-wrap;
+  
+    column-gap: 40px;
+    row-gap: 5px;
+  }
+  
+  &__item {
+    transition: color .3s;
+  
+    &:hover {
+      color: var(--hover-color);
+    }
+    
+    &:active {
+      color: darken($color: #171fe5, $amount: 10);
+    }
+  }
 }
 
-.nav__body {
-  @include flex-c-sb-wrap;
+// Media
+@media (max-width: 991.98px) { 
+  .nav {
 
-  column-gap: 40px;
-  row-gap: 5px;
-}
-
-.nav__item {
-  transition: color .3s;
-}
-
-.nav__item:hover {
-  color: var(--hover-color);
-}
-
-.nav__item:active {
-  color: darken($color: #171fe5, $amount: 10);
+    &__body {
+      display: none;
+    }
+  }
 }

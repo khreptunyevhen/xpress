@@ -2,14 +2,24 @@
   display: flex;
   align-items: center;
   gap: 4px;
+
+  &__img,
+  &__text {
+    fill: #171fe5;
+  }
+
+  &__img--light,
+  &__text--light {
+    fill: #fff;
+  }
 }
 
-.logo__img,
-.logo__text {
-  fill: #171fe5;
-}
+// Media
+@media (max-width: 575.98px) { 
+  .logo {
 
-.logo__img--light,
-.logo__text--light {
-  fill: #fff;
+    &__text {
+      display: none;
+    }
+  }
 }
