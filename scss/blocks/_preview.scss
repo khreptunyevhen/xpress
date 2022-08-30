@@ -1,0 +1,21 @@
+.preview {
+  padding: var(--section-padding) 0;
+
+  &__title {
+    display: none;
+  }
+  
+  &__items {
+    @include flex-c-sb;
+  }
+  
+  &__item {
+  
+    &-img {
+      max-width: 468px;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+}
