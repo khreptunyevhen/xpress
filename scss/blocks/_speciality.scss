@@ -1,0 +1,29 @@
+.item-speciality {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+  max-width: 320px;
+  text-align: center;
+  
+  &__img {
+    @include flex-center;
+
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(23, 31, 229, .1);
+    margin-bottom: 20px;
+  }
+  &__title {
+    flex: 1 1 auto;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  &__text {
+    color: rgba(4, 5, 34, .7);
+  }
+}

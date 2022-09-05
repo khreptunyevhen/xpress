@@ -1,0 +1,12 @@
+.speciality {
+  padding: var(--section-padding) 0;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 90px;
+    margin-top: 70px;
+  }
+}
