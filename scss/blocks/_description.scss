@@ -10,6 +10,16 @@
       max-width: 664px;
       margin: 0 auto;
     }
+    &--small {
+      max-width: 380px;
+      text-align: right;
+    }
+  }
+
+  &--flex {
+    @include flex-c-sb-wrap;
+
+    gap: 40px;
   }
 }
 

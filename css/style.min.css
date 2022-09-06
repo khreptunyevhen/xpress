@@ -502,6 +502,24 @@ body {
   max-width: 664px;
   margin: 0 auto;
 }
+.description__text--small {
+  max-width: 380px;
+  text-align: right;
+}
+.description--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
 
 .title {
   text-align: center;
@@ -653,4 +671,91 @@ body {
 }
 .brand__img {
   width: 100%;
+}
+
+.blog {
+  padding: var(--section-padding) 0;
+}
+.blog__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, auto));
+  grid-template-rows: minmax(502px, auto);
+  grid-auto-rows: minmax(502px, auto);
+  gap: 30px;
+  margin-top: 70px;
+}
+.blog__item {
+  height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .blog__list {
+    grid-template-columns: repeat(2, minmax(300px, 362px));
+  }
+}
+@media (max-width: 767.98px) {
+  .blog__list {
+    grid-template-columns: repeat(1, minmax(300px, 362px));
+  }
+}
+.blog-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-shadow: 0px 4px 8px rgba(4, 5, 34, 0.05);
+          box-shadow: 0px 4px 8px rgba(4, 5, 34, 0.05);
+  border-radius: 0px 0px 10px 10px;
+}
+.blog-post:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.blog-post__img {
+  height: 287px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 25px;
+}
+.blog-post__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 25px;
+}
+.blog-post__title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
+}
+.blog-post__text {
+  margin-bottom: 20px;
+  color: rgba(4, 5, 34, 0.7);
+}
+.blog-post__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 500;
+  padding: 0 25px;
+  padding-bottom: 25px;
+}
+.blog-post__bottom-see {
+  color: var(--secondary-color);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.blog-post__bottom-see:hover {
+  text-decoration: underline;
 }
