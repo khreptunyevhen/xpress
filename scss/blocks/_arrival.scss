@@ -6,12 +6,17 @@
 
     margin-bottom: 70px;
 
-    span {
+    a {
       color: var(--secondary-color);
       text-transform: uppercase;
       font-weight: 600;
       font-size: 22px;
       line-height: 1.4;
+      transition: all .5s ease-in;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
