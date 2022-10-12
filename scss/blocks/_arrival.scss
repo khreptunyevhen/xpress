@@ -3,6 +3,8 @@
 
   &__top {
     @include flex-c-sb;
+    flex-wrap: wrap;
+    gap: 30px;
 
     margin-bottom: 70px;
 
@@ -27,7 +29,7 @@
     grid-auto-rows: 340px;
     gap: 30px;
   }
-  
+
   &__item {
 
     &:nth-child(1) {
@@ -46,7 +48,7 @@
 // Media
 @media (max-width: 575.98px) {
   .arrival {
-    
+
     &__items {
       grid-template-columns: 1fr;
     }

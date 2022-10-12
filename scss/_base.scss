@@ -1,6 +1,10 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--main-ff);
   color: var(--primary-color);
@@ -10,10 +14,14 @@ body {
   line-height: 1.6;
 }
 
+// .stop-scroll {
+//   overflow: hidden;
+// }
+
 .container {
   max-width: calc(var(--main-container) + 2 * var(--padding-container));
   padding: 0 var(--padding-container);
-  
+
   margin: 0 auto;
 }
 

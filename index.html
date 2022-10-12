@@ -13,7 +13,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="container header__container">
-        <a href="#!" class="header__logo logo">
+        <a href="#home" class="header__logo logo">
           <svg class="logo__img" width="41" height="31" viewbox="0 0 41 31" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path
@@ -49,19 +49,19 @@
               d="M91.4106 18.5498C91.4106 17.8939 91.1382 17.3944 90.5933 17.0513C90.0584 16.7082 89.1654 16.4054 87.9141 16.1431C86.6628 15.8807 85.6183 15.5477 84.7808 15.144C82.9442 14.256 82.0259 12.9694 82.0259 11.2842C82.0259 9.87142 82.6213 8.69076 83.812 7.74219C85.0028 6.79362 86.5164 6.31934 88.353 6.31934C90.3107 6.31934 91.89 6.80371 93.0908 7.77246C94.3018 8.74121 94.9072 9.99756 94.9072 11.5415H91.229C91.229 10.8351 90.9666 10.2498 90.4419 9.78564C89.9172 9.31136 89.2209 9.07422 88.353 9.07422C87.5457 9.07422 86.8848 9.2609 86.3701 9.63428C85.8656 10.0076 85.6133 10.5072 85.6133 11.1328C85.6133 11.6979 85.8504 12.1369 86.3247 12.4497C86.799 12.7625 87.7576 13.0804 89.2007 13.4033C90.6437 13.7161 91.7739 14.0946 92.5913 14.5386C93.4188 14.9725 94.0293 15.4972 94.4229 16.1128C94.8265 16.7284 95.0283 17.4751 95.0283 18.353C95.0283 19.8263 94.4178 21.0221 93.1968 21.9404C91.9757 22.8486 90.3763 23.3027 88.3984 23.3027C87.0563 23.3027 85.8605 23.0605 84.811 22.5762C83.7616 22.0918 82.9442 21.4258 82.3589 20.5781C81.7736 19.7305 81.481 18.8172 81.481 17.8384H85.0532C85.1037 18.7062 85.4316 19.3773 86.0371 19.8516C86.6426 20.3158 87.4448 20.5479 88.4438 20.5479C89.4126 20.5479 90.1493 20.3662 90.6538 20.0029C91.1584 19.6296 91.4106 19.1452 91.4106 18.5498Z" />
           </svg>
         </a>
-        <nav class="header__nav nav">
+        <nav class="header__nav nav" data-nav>
           <ul class="nav__body">
             <li class="nav__list">
-              <a href="#!" class="nav__item">Home</a>
+              <a href="#home" class="nav__item">Home</a>
             </li>
             <li class="nav__list">
-              <a href="#!" class="nav__item">About</a>
+              <a href="#about" class="nav__item">About</a>
             </li>
             <li class="nav__list">
-              <a href="#!" class="nav__item">Blog</a>
+              <a href="#blog" class="nav__item">Blog</a>
             </li>
             <li class="nav__list">
-              <a href="#!" class="nav__item">Contact</a>
+              <a href="#contact" class="nav__item">Contact</a>
             </li>
           </ul>
         </nav>
@@ -88,11 +88,14 @@
             </svg>
           </button>
         </form>
+        <button class="burger" aria-label="open menu" aria-expanded="false" data-burger>
+          <span class="burger__line"></span>
+        </button>
       </div>
     </header>
     <!-- End of header -->
     <main class="main">
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="container">
           <div class="hero__wrapper">
             <span class="hero__subtitle">Trendy Collection</span>
@@ -122,7 +125,7 @@
           </div>
         </div>
       </section>
-      <section class="arrival">
+      <section class="arrival" id="about">
         <div class="container arrival__container">
           <div class="arrival__top">
             <h2 class="title title--left">New Arrival</h2>
@@ -262,7 +265,7 @@
         </div>
       </section>
       <!-- End of brand -->
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="container">
           <div class="description description--flex">
             <h2 class="title title--left">Recent Blog Posts</h2>
@@ -331,10 +334,10 @@
       </section>
       <!-- End of blog -->
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="container footer__container">
         <div class="footer__socials">
-          <a href="#!" class="footer__logo logo">
+          <a href="#home" class="footer__logo logo">
             <svg class="logo__img logo__img--light" width="41" height="31" viewbox="0 0 41 31"
               xmlns="http://www.w3.org/2000/svg">
               <g>
@@ -481,6 +484,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="./js/burger.js"></script>
 </body>
 
 </html>

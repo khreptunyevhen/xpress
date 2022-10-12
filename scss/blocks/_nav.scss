@@ -3,30 +3,61 @@
 
   &__body {
     @include flex-c-sb-wrap;
-  
+
     column-gap: 40px;
     row-gap: 5px;
   }
-  
+
   &__item {
     transition: color .3s;
-  
+
     &:hover {
       color: var(--hover-color);
     }
-    
+
     &:active {
       color: darken($color: #171fe5, $amount: 10);
     }
   }
+
+
 }
 
 // Media
-@media (max-width: 991.98px) { 
+@media (max-width: 991.98px) {
   .nav {
 
+    background-color: var(--secondary-color);
+
+    position: absolute;
+    top: var(--header-height);
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all .3s ease-in-out;
+
     &__body {
-      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      max-width: 300px;
+      height: calc(100% - var(--header-height));
+      padding: 60px;
+      margin: 0 auto;
+      overflow-y: auto;
+    }
+
+    &__list {
+      margin-bottom: 25px;
+      font-size: 26px;
+      border-bottom: 2px solid var(--primary-color);
+      width: 100%;
+      text-align: center;
+    }
+
+    &--visible {
+      right: 0;
     }
   }
 }

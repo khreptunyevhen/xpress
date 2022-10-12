@@ -5,9 +5,12 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
+    flex-wrap: wrap;
+    gap: 30px;
 
     margin-bottom: 144px;
   }
+
   &__link-all {
     color: var(--secondary-color);
 
@@ -20,15 +23,18 @@
       text-decoration: underline;
     }
   }
+
   &__bottom {
     @include flex-c-sb-wrap;
 
     column-gap: 130px;
     row-gap: 40px;
   }
+
   &__item {
     max-width: 200px;
   }
+
   &__img {
     width: 100%;
   }
