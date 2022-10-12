@@ -1,0 +1,30 @@
+.scroll-top {
+  --size: 50px;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--secondary-color);
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+
+  svg {
+    --size: 46px;
+    width: var(--size);
+    height: var(--size);
+
+    stroke: var(--primary-color);
+  }
+
+  &--visible {
+    opacity: 1;
+  }
+}

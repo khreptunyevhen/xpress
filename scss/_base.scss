@@ -14,10 +14,6 @@ body {
   line-height: 1.6;
 }
 
-// .stop-scroll {
-//   overflow: hidden;
-// }
-
 .container {
   max-width: calc(var(--main-container) + 2 * var(--padding-container));
   padding: 0 var(--padding-container);
