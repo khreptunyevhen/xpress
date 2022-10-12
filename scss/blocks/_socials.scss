@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba($color: white, $alpha: .1);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    svg {
+      display: block;
+    }
+  }
+}
