@@ -17,6 +17,32 @@ function sliders() {
       }
     }
   });
+
+  const sellingSlider = new Swiper('.slider-selling', {
+    effect: "coverflow",
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 5,
+    coverflowEffect: {
+      rotate: 25,
+      stretch: 0,
+      depth: 80,
+      modifier: 1,
+      slideShadows: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: "auto"
+      },
+      576: {
+        slidesPerView: 3
+      },
+      992: {
+        slidesPerView: 4
+      }
+    }
+  });
 }
 
 sliders();

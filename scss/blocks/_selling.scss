@@ -9,17 +9,24 @@
 .slider-selling {
 
   &__wrapper {
-    @include flex-c-sb-wrap;
+    @include flex-c-sb;
 
+    margin-top: 40px;
   }
+
   &__item {
     height: 500px;
   }
+
   &__img {
-    max-width: 228px;
+    max-width: 380px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .swiper-slide {
+    max-width: 380px !important;
   }
 }
 
@@ -28,8 +35,8 @@
   .slider-selling {
 
     &__item {
-      margin: 0 auto;;
+      margin: 0 auto;
+      ;
     }
   }
 }
-
