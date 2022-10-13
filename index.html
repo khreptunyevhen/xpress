@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expres shop for what you want</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -113,15 +114,17 @@
       <section class="preview">
         <div class="container">
           <h2 class="preview__title">Shop For What You Want</h2>
-          <div class="preview__items">
-            <div class="preview__item">
-              <img src="./img/preview/preview-2.png" alt="item1" class="preview__item-img">
-            </div>
-            <div class="preview__item">
-              <img src="./img/preview/preview-1.png" alt="item2" class="preview__item-img">
-            </div>
-            <div class="preview__item">
-              <img src="./img/preview/preview-3.png" alt="item3" class="preview__item-img">
+          <div class="swiper preview__slider">
+            <div class="swiper-wrapper preview__items">
+              <div class="swiper-slide preview__item">
+                <img src="./img/preview/preview-2.png" alt="item1" class="preview__item-img">
+              </div>
+              <div class="swiper-slide preview__item">
+                <img src="./img/preview/preview-1.png" alt="item2" class="preview__item-img">
+              </div>
+              <div class="swiper-slide preview__item">
+                <img src="./img/preview/preview-3.png" alt="item3" class="preview__item-img">
+              </div>
             </div>
           </div>
         </div>
@@ -495,6 +498,8 @@
 
   <script src="./js/burger.js"></script>
   <script src="./js/scrollToTop.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/sliders.js"></script>
 </body>
 
 </html>
